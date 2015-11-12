@@ -1,0 +1,12 @@
+
+ 38133  n1= 33838  n2= 4295
+ 68485  n1= 60794  n2= 7691
+149167  n1=132476  n2=16691
+337052  n1=299338  n2=37714
+
+In general, you can get the two sizes directly from the matrices using the following:
+
+n1 = size(M,1);
+n2 = size(A,1)-n1;
+A(n1+1:end,n1+1:end) = sparse(n2,n2);
+B1(n1+1:end,:) = 0;
